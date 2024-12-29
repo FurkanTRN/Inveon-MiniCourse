@@ -1,5 +1,5 @@
 import {Button, Card} from "react-bootstrap";
-import {truncateText} from "../../helpers/truncate-text.js";
+import {textHelpers} from "../../helpers/text-helpers.js";
 import {useNavigate} from "react-router-dom";
 
 const CourseCard = ({course}) => {
@@ -22,9 +22,9 @@ const CourseCard = ({course}) => {
                 }}
             />
             <Card.Body className="d-flex flex-column">
-                <Card.Title className="fw-bold">{truncateText(course.name, 30)}</Card.Title>
+                <Card.Title className="fw-bold">{textHelpers(course.name, 30)}</Card.Title>
 
-                <Card.Text className="text-muted">{truncateText(course.description, 60)}</Card.Text>
+                <Card.Text className="text-muted">{textHelpers(course.description, 60)}</Card.Text>
 
                 <div className="text-muted small mb-2">
                     <strong>By {course.instructorName}</strong>
