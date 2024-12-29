@@ -10,8 +10,16 @@ public class ApplicationDbContext : IdentityDbContext<AppUser, AppRole, long>
     {
     }
 
+    public DbSet<Category> Categories { get; set; } = null!;
+    public DbSet<Course> Courses { get; set; } = null!;
+
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
         base.OnModelCreating(modelBuilder);
+
+        modelBuilder.Entity<Category>()
+            .HasMany(c => c.Courses)
+            .WithOne(c => c.Category)
+            .HasForeignKey(c => c.CategoryId);
     }
 }
