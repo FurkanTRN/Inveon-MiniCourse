@@ -11,4 +11,10 @@ public class Course
     public decimal Price { get; set; }
     public long CategoryId { get; set; }
     public Category Category { get; set; } = null!;
+    
+    public long InstructorId { get; set; }
+    public AppUser Instructor { get; set; } = null!;
+    
+    public ICollection<OrderCourse> OrderCourses { get; set; } = new HashSet<OrderCourse>();
+    public ICollection<UserCourse> EnrolledUsers { get; set; } = new HashSet<UserCourse>();
 }

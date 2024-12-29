@@ -9,4 +9,8 @@ public class AppUser : IdentityUser<long>
     public string? AvatarPath { get; set; }
     public DateTime CreatedDate { get; set; } = DateTime.UtcNow;
     
+    public ICollection<Course> CreatedCourses { get; set; } = new HashSet<Course>();
+
+    public ICollection<UserCourse> EnrolledCourses { get; set; } = new HashSet<UserCourse>();
+
 }
