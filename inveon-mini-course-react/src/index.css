@@ -1,0 +1,73 @@
+.no-caret .dropdown-toggle::after {
+    display: none !important;
+}
+#search-icon {
+    background-color: #f8f9fa; /* Match the navbar's background color */
+    border: none; /* Remove the border for a clean look */
+}
+.input-group .form-control {
+    padding-left: 0.5rem; /* Add small spacing between the icon and input text */
+}
+
+.input-group .input-group-text {
+    color: #6c757d; /* Default Bootstrap muted text color for the icon */
+}
+.cart-badge {
+    background-color: purple;
+    font-size: 0.65rem;
+    transform: translate(-65%, -70%);
+}
+.course-card {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease-in-out;
+}
+
+.course-card:hover {
+    transform: translateY(-5px);
+}
+
+.course-card img {
+    border-radius: 8px;
+}
+
+.course-card h5 {
+    font-size: 1.25rem;
+}
+
+.course-card button {
+    font-size: 0.9rem;
+    padding: 6px 12px;
+}
+.course-card {
+    transition: transform 0.2s ease-in-out;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.course-card:hover {
+    transform: translateY(-5px);
+}
+
+.carousel img {
+    border-radius: 8px;
+}
+
+.carousel h5 {
+    font-size: 1.5rem;
+}
+
+.carousel p {
+    font-size: 1rem;
+    color: #6c757d;
+}
+.carousel-control-prev {
+    left: -50px;
+}
+
+.carousel-control-next {
+    right: -50px;
+}
+
+.nav-pills .nav-link.active {
+    background-color: #bebebe !important;
+    color: #000 !important;
+}
